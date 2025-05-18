@@ -255,23 +255,23 @@ function updateScatterPlot(timeFilter) {
 }
 
 function updateTimeDisplay() {
-  let timeFilter = Number(timeSlider.value); // Get slider value
+  let timeFilter = Number(timeSlider.value); 
 
   if (timeFilter === -1) {
-    timeDisplay.textContent = ''; // Clear time display
-    anyTimeLabel.style.display = 'block'; // Show "(any time)"
+    timeDisplay.textContent = ''; 
+    anyTimeLabel.style.display = 'block'; 
   } else {
-    timeDisplay.textContent = formatTime(timeFilter); // Display formatted time
-    anyTimeLabel.style.display = 'none'; // Hide "(any time)"
+    timeDisplay.textContent = formatTime(timeFilter); 
+    anyTimeLabel.style.display = 'none'; 
   }
 
-  // Call updateScatterPlot to reflect the changes on the map
+  //reflect the changes on the map
   updateScatterPlot(timeFilter);
 }
 
 
 
-// 2c) Wire up the slider and initialize display
+
 timeSlider.addEventListener('input', updateTimeDisplay);
 updateTimeDisplay();
 
