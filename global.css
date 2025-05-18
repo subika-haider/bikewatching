@@ -1,0 +1,39 @@
+body {
+  font: 100%/1.5 system-ui, sans-serif;
+  display: flex;
+  flex-flow: column;
+  max-width: 80em;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 1em;
+}
+
+/* Layout the header + filter UI */
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  padding: 0.5em 1em;
+}
+
+/* Push the filter to the right and keep things aligned */
+header label {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* Force time & “any time” onto their own lines */
+#time-display,
+#any-time {
+  display: block;
+  font-size: 0.9em;
+}
+
+/* Style the “any time” hint differently */
+#any-time {
+  font-style: italic;
+  color: gray;
+}
